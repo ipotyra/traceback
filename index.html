@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceBack</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/cabecalio.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        #mapa {
+            height: 500px; /* **CRUCIAL**: O mapa precisa de uma altura definida */
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1>Trace Back</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Map View</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="report.html">Report</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </nav>
+    </div>    
+    <div class="main">
+        <div id="mapa">
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        // Inicializa o mapa, definindo a visualização inicial [latitude, longitude], e zoom
+        // Agora, 'mapa' (no L.map) CORRESPONDE ao ID da DIV 'mapa'
+        var mapa = L.map('mapa').setView([52.5200, 13.4050], 11); // Berlim, zoom 13
+
+        // Adiciona o mapa base (OpenStreetMap tiles)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(mapa);
+        
+        // Coloque aqui o código para carregar os marcadores via PHP/SQL (próxima seção)
+    </script>
+    <footer>
+            <ul class="footerlista">
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="report.html">Report</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <small>
+                Copyright © 2026. All Rights Reserved.
+            </small>
+        </footer>
+</body>
+</html>

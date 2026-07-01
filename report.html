@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/cabecalio.css">
+</head>
+
+<body>
+    <div class="title-container">
+        <h1>Trace Back</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Map View</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="report.html">Report</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </nav>
+    </div>    
+    <div class="formulario">
+        <h2>Report Form</h2>
+        <form>
+            <label for="address">Address or nearby place:</label><br>
+            <input type="text" id="address" name="address"><br>
+            <label for="incident">Type of incident:</label><br>
+            <input type="checkbox" id="sh" name="sh" value="sh">
+            <label for="sh">Street harassment (catcalling, whistling, unwanted comments)</label><br>
+            <input type="checkbox" id="fs" name="fs" value="fs">
+            <label for="fs">Following or stalking</label><br>
+            <input type="checkbox" id="pa" name="pa" value="pa">
+            <label for="pa">Physical aggression (pushing, grabbing, hitting)</label><br>
+            <input type="checkbox" id="sa" name="sa" value="sa">
+            <label for="sa">Sexual assault attempt</label><br>
+            <input type="checkbox" id="eoi" name="eoi" value="eoi">
+            <label for="eoi">Exposure or indecent behavior</label><br>
+            <input type="checkbox" id="vt" name="vt" value="vt">
+            <label for="vt">Verbal threats or intimidation</label><br>
+            <input type="checkbox" id="o" name="o" value="o">
+            <label for="o">Other (please describe)</label><br>
+            <textarea id="other_text" name="other_text" rows="3" cols="40" placeholder="Describe here..." style="display:none;"></textarea><br>
+            <script>
+                document.getElementById('o').addEventListener('change', function() {
+                    const textarea = document.getElementById('other_text');
+                    textarea.style.display = this.checked ? 'block' : 'none';
+                });
+            </script>
+            <label for="date">Date of incident:</label><br>
+            <input type="date" id="date" name="date" required><br>
+            <label for="time">Approximate Time (optional):</label><br>
+            <input type="time" id="time" name="time">
+            <p>
+                How did you feel? (optional but valuable for mapping perception)
+            </p><br>
+            <input type="checkbox" id="unsafe" name="unsafe" value="unsafe">
+            <label for="unsafe">Unsafe</label><br>
+            <input type="checkbox" id="scared" name="scared" value="scared">
+            <label for="scared">Scared</label><br>
+            <input type="checkbox" id="shocked" name="shocked" value="shocked">
+            <label for="shocked">Shocked</label><br>
+            <input type="checkbox" id="supported" name="supported" value="supported">
+            <label for="supported">Supported by others nearby</label><br>
+            <input type="checkbox" id="angry" name="angry" value="angry">
+            <label for="Angry">Angry</label><br>
+            <input type="checkbox" id="other" name="other" value="other">
+            <label for="other">Other:</label>
+            <textarea id="othertex" name="othertex" rows="3" cols="40" placeholder="Describe here..." style="display:none;"></textarea><br>
+            <script>
+                document.getElementById('other').addEventListener('change', function() {
+                    const textarea = document.getElementById('othertex');
+                    textarea.style.display = this.checked ? 'block' : 'none';
+                });
+            </script>
+            <p>
+                Anonymity and contact
+            </p> 
+            <input type="checkbox" id="anonymous" name="anonymous" value="anonymous">
+            <label for="anonymous">I prefer to remain anonymous</label><br>
+            <input type="checkbox" id="contacted" name="contacted" value="contacted">
+            <label for="contacted">I agree to share my email for follow-up or to be contacted by support (optional)</label><br>
+            <textarea id="contactemail" name="contactemail" rows="1" cols="40" placeholder="Email here" style="display:none;"></textarea><br>
+            <script>
+                document.getElementById('contacted').addEventListener('change', function() {
+                    const textarea = document.getElementById('contactemail');
+                    textarea.style.display = this.checked ? 'block' : 'none';
+                });
+            </script>
+           <p>
+                <small>
+                    By submitting this report, you agree that your information may be used anonymously for mapping and awareness purposes.
+                    No personal data will be shared without your consent.
+                </small>
+            </p>
+
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I have read and agree to the terms above.</label><br><br>
+
+            <button type="submit">Send Report</button> 
+        </form>
+    </div>
+    
+</body>
+</html>
