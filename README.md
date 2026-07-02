@@ -41,7 +41,7 @@ traceback/
    git clone https://github.com/ipotyra/traceback.git
    ```
 3. Start Apache (and MySQL, if the project uses a database) from the XAMPP/WAMP control panel
-4. Open `http://localhost/traceback/index.html` in your browser
+4. Open `http://traceback.local/index.html` in your browser
 
 > If the project uses a database, configure your credentials in a local, non-versioned file. Detailed setup instructions will be added here soon.
 
