@@ -45,14 +45,14 @@ traceback/
 
 > If the project uses a database, configure your credentials in a local, non-versioned file. Detailed setup instructions will be added here soon.
 
-## 📌 Project status
+## Project status
 
-🚧 Work in progress — this is a personal project currently under development, built both as a learning experience and to create real social impact.
+Work in progress — this is a personal project currently under development, built both as a learning experience and to create real social impact.
 
-## 🤝 Contributing
+## Contributing
 
 Suggestions, feedback, and ideas are very welcome! Feel free to open an issue.
 
-## 📄 License
+## License
 
 No license has been defined for this project yet.
